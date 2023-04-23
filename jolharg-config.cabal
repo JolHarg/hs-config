@@ -1,5 +1,5 @@
 cabal-version:       2.4
-name:                jolharg-models
+name:                jolharg-config
 version:             0.1.0.0
 license:             AGPL-3.0-only
 author:              Dan Dart
@@ -44,7 +44,7 @@ library
 
   
 
-test-suite jolharg-models-test
+test-suite jolharg-config-test
   hs-source-dirs:      test
   type:                exitcode-stdio-1.0
   default-language:    Haskell2010
