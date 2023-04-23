@@ -11,7 +11,7 @@ extra-source-files:  CHANGELOG.md, README.md
 
 library
   exposed-modules:    Data.Config
-                    , Data.Config.YAML
+                    , Data.Config.TH
  -- other-extensions:
   build-depends:      base >= 4.12 && < 5
                     , jolharg-models
