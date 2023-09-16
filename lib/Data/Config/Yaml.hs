@@ -1,6 +1,6 @@
 {-# LANGUAGE TemplateHaskell #-}
 
-module Data.Config.YAML where
+module Data.Config.Yaml where
 
 import           Data.Aeson
 import           Data.Config
