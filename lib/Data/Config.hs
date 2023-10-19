@@ -1,6 +1,6 @@
 module Data.Config where
 
-import           Data.Model
+import Data.Model
 
 -- This form of Config is for compile-time variables. Stuff we would use differently, not let our users use differently.
 

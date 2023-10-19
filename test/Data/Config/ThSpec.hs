@@ -1,7 +1,7 @@
 module Data.Config.ThSpec where
 
-import           Data.Config.TH
-import           HSpec
+import Data.Config.TH
+import HSpec
 
 defineAllModels
 
