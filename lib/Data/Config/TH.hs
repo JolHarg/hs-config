@@ -9,4 +9,4 @@ import Language.Haskell.TH
 import Language.Haskell.TH.Syntax
 
 defineAllModels ∷ DecsQ
-defineAllModels = makeFieldTypes <$> entities getConfig
+defineAllModels = undefined --  makeFieldTypesForCreate <$> entities getConfig
