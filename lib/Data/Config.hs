@@ -9,7 +9,7 @@ data Config = Config {
     appName      :: String,
     appIcon      :: String,
     description  :: String,
-    keywords     :: [String],
+    -- keywords     :: [String],
     updateServer :: Maybe String,
     entities     :: [Model]
 } deriving (Eq, Show)
