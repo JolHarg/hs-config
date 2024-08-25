@@ -42,8 +42,7 @@ library
       -Wno-implicit-prelude -Wno-missing-safe-haskell-mode
       -Wno-missing-local-signatures -Wno-all-missed-specialisations
       -Wno-missed-specialisations
-
-    -wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
+      -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
 
   else
     ghc-options:
@@ -51,8 +50,7 @@ library
       -Wno-missing-import-lists -Wno-missing-export-lists
       -Wno-implicit-prelude -Wno-missing-local-signatures
       -Wno-all-missed-specialisations -Wno-missed-specialisations
-
-    -wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
+      -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
       -wno-missing-safe-haskell-mode
 
       -wno-missing-kind-signatures -Wno-missing-poly-kind-signatures
@@ -77,8 +75,7 @@ test-suite jolharg-config-test
       -Wno-missing-export-lists -Wno-implicit-prelude
       -Wno-missing-local-signatures -Wno-missing-safe-haskell-mode
       -Wno-all-missed-specialisations -Wno-missed-specialisations
-
-    -wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
+      -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
 
   else
     ghc-options:
@@ -87,8 +84,7 @@ test-suite jolharg-config-test
       -Wno-missing-export-lists -Wno-implicit-prelude
       -Wno-missing-local-signatures -Wno-all-missed-specialisations
       -Wno-missed-specialisations
-
-    -wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
+      -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
       -wno-missing-safe-haskell-mode
 
       -wno-missing-kind-signatures -Wno-missing-poly-kind-signatures
