@@ -52,7 +52,6 @@ library
       -Wno-all-missed-specialisations -Wno-missed-specialisations
       -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
       -wno-missing-safe-haskell-mode
-
       -wno-missing-kind-signatures -Wno-missing-poly-kind-signatures
 
 test-suite jolharg-config-test
@@ -86,7 +85,6 @@ test-suite jolharg-config-test
       -Wno-missed-specialisations
       -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
       -wno-missing-safe-haskell-mode
-
       -wno-missing-kind-signatures -Wno-missing-poly-kind-signatures
 
   build-depends:
