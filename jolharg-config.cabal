@@ -1,4 +1,4 @@
-cabal-version:      3.4
+cabal-version:      3.0
 name:               jolharg-config
 version:            0.1.0.0
 license:            AGPL-3.0-only
@@ -14,17 +14,22 @@ extra-source-files:
 
 library
   exposed-modules:
-    Data.Config
-    Data.Config.TH
+    Config.Env
+  other-modules:
+    Config.Foreign
 
   -- other-extensions:
   build-depends:
     , base              >=4.12 && <5
-    , jolharg-models
+    -- , jolharg-models
     , template-haskell
-    , time
-    , uuid-types
-    , yaml
+    , text
+    -- , time
+    -- , uuid-types
+    -- , yaml
+  if impl(ghcjs)
+    build-depends:
+      ghcjs-dom-jsffi
 
   hs-source-dirs:     lib
   default-language:   Haskell2010
@@ -43,6 +48,7 @@ library
       -Wno-missing-local-signatures -Wno-all-missed-specialisations
       -Wno-missed-specialisations
       -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
+      -Wno-prepositive-qualified-module
 
   else
     ghc-options:
@@ -51,6 +57,7 @@ library
       -Wno-implicit-prelude -Wno-missing-local-signatures
       -Wno-all-missed-specialisations -Wno-missed-specialisations
       -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
+      -Wno-prepositive-qualified-module
       -wno-missing-safe-haskell-mode
       -wno-missing-kind-signatures -Wno-missing-poly-kind-signatures
 
@@ -75,6 +82,7 @@ test-suite jolharg-config-test
       -Wno-missing-local-signatures -Wno-missing-safe-haskell-mode
       -Wno-all-missed-specialisations -Wno-missed-specialisations
       -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
+      -Wno-prepositive-qualified-module
 
   else
     ghc-options:
@@ -84,6 +92,7 @@ test-suite jolharg-config-test
       -Wno-missing-local-signatures -Wno-all-missed-specialisations
       -Wno-missed-specialisations
       -Wno-missing-role-annotations -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags -Wno-missed-specialisations
+      -Wno-prepositive-qualified-module
       -wno-missing-safe-haskell-mode
       -wno-missing-kind-signatures -Wno-missing-poly-kind-signatures
 
@@ -98,3 +107,4 @@ test-suite jolharg-config-test
   -- , QuickCheck
   build-tool-depends: hspec-discover:hspec-discover
   other-modules:      MainSpec
+                    , Data.Config.ThSpec
