@@ -1,10 +1,12 @@
 {-# LANGUAGE CPP              #-}
-{-# LANGUAGE JavaScriptFFI    #-}
 {-# LANGUAGE Unsafe           #-}
+
+#if defined(__GHCJS__)
+
+{-# LANGUAGE JavaScriptFFI    #-}
 
 module Config.Foreign (envVar) where
 
-#if defined(__GHCJS__)
 import Control.Exception
 import GHCJS.DOM.Types
 
@@ -16,6 +18,8 @@ envVar k = catch (do
     v <- js_envVar p
     pure $ fromJSString v) (\(SomeException ex) -> pure $ "Exception caught in js_envVar: " <> show ex)
 #else
+module Config.Foreign (envVar) where
+
 import System.Environment
 
 envVar :: String -> IO String
